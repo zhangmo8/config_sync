@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # git 
+alias gba="git branch -a"
+alias gcl="git clone"
 alias gs="git status"
 
 alias gcm="git commit -m"
