@@ -132,3 +132,27 @@ alias gfrb='git fetch origin && git rebase origin/master'
 export PNPM_HOME="/Users/ssa-user/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+
+# proxy
+function proxy() {
+  export http_proxy=http://127.0.0.1:7890
+  export https_proxy=http://127.0.0.1:7890
+  git config --global http.proxy 'http://127.0.0.1:7890';
+  git config --global https.proxy 'http://127.0.0.1:7890';
+}
+
+function unproxy() {
+  unset http_proxy
+  unset https_proxy
+  git config --global --unset https.proxy
+  git config --global --unset http.proxy
+}
+
+# proxy end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
