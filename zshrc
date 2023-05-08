@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -15,6 +16,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 ZSH_THEME="jovial"
 
@@ -103,6 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # git 
+alias gb="git branch"
+alias gbd="git branch -d"
 alias gba="git branch -a"
 alias gcl="git clone"
 alias gs="git status"
@@ -125,14 +130,16 @@ alias gckb='git checkout -b'
 
 alias gplr="git pull --rebase"
 
-alias gfrb='git fetch origin && git rebase origin/master'
+alias gfrb='git fetch origin && git rebase'
+
+alias gm='git merge'
+
 # git end
 
 # pnpm
 export PNPM_HOME="/Users/ssa-user/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
-
 
 # proxy
 function proxy() {
@@ -151,8 +158,27 @@ function unproxy() {
 
 # proxy end
 
+# github
+
+function github() {
+ git config --global user.name "zhangmo8"
+ git config --global user.email "wegi866@gmail.com"
+}
+
+function ungithub() {
+ git config --global user.name "jiahengz"
+ git config --global user.email "jiahengz@wicresoft.com"
+}
+
+# github end
+
+# flutter
+
+alias f="fvm flutter"
+
+# flutter end
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
