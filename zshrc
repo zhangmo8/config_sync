@@ -3,12 +3,9 @@
 # on my zsh
 export ZSH="$HOME/.oh-my-zsh"
 
-
 ZSH_THEME="spaceship"
 
 SPACESHIP_TIME_SHOW="true"
-
-source $ZSH/oh-my-zsh.sh
 
 plugins=(
   git
@@ -16,6 +13,10 @@ plugins=(
   zsh-syntax-highlighting
   zsh-z
 )
+
+source $ZSH/oh-my-zsh.sh
+
+# end on my zsh
 
 
 # git 
