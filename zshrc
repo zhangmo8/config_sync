@@ -1,11 +1,14 @@
 
 
 # on my zsh
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"	
+
+
 
 ZSH_THEME="spaceship"
 
 SPACESHIP_TIME_SHOW="true"
+
 
 plugins=(
   git
@@ -14,10 +17,10 @@ plugins=(
   zsh-z
 )
 
+
 source $ZSH/oh-my-zsh.sh
 
 # end on my zsh
-
 
 # git 
 alias gb="git branch"
@@ -36,6 +39,7 @@ alias grc="git reset --soft HEAD^ && git reset head"
 
 alias gpl="git pull"
 alias gps="git push"
+alias gpsu="git push --set-upstream origin"
 
 alias gacm="git add . && git commit -m"
 
@@ -64,7 +68,7 @@ alias c="code ."
 
 # pnpm
 export PNPM_HOME="/Users/ssa-user/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+export PATH="$PNPM_HOME:$PATH:~/fvm/default/bin"
 # pnpm end
 
 # proxy
@@ -91,6 +95,10 @@ function github() {
  git config --global user.email "wegi866@gmail.com"
 }
 
+function ungithub() {
+ git config --global user.name "jiahengz"
+ git config --global user.email "jiahengz@wicresoft.com"
+}
 
 # github end
 
