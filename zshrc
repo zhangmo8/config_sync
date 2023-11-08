@@ -96,8 +96,8 @@ function github() {
 }
 
 function ungithub() {
- git config --global user.name "jiahengz"
- git config --global user.email "jiahengz@wicresoft.com"
+ git config --global user.name ""
+ git config --global user.email ""
 }
 
 # github end
