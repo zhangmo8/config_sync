@@ -34,7 +34,7 @@ alias gcmu="git commit --amend"
 
 alias ga="git add"
 alias gaa="git add ."
-alias grs="git reset head"
+alias grs="git reset --soft HEAD^"
 alias grc="git reset --soft HEAD^ && git reset head"
 
 alias gpl="git pull"
