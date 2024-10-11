@@ -51,6 +51,10 @@ alias gfrb='git fetch origin && git rebase'
 
 alias gm='git merge'
 
+alias gsm='git stash push -m'
+
+alias gsp='git stash pop'
+
 # git end
 
 # npm
