@@ -70,7 +70,7 @@ alias c="code ."
 # vscode end
 
 # pnpm
-export PNPM_HOME="/Users/ssa-user/Library/pnpm"
+export PNPM_HOME="/Users/${username}/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH:~/fvm/default/bin"
 # pnpm end
 
@@ -87,6 +87,10 @@ function unproxy() {
   unset https_proxy
   git config --global --unset https.proxy
   git config --global --unset http.proxy
+}
+
+function gfu() {
+  git fetch upstream && git reset --hard upstream/$1 && git push -f
 }
 
 # proxy end
