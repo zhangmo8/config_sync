@@ -60,6 +60,7 @@ alias gsp='git stash pop'
 # npm
 alias i="ni"
 alias d="nr dev"
+alias b="nr build"
 alias s="nr start"
 
 # npm end
